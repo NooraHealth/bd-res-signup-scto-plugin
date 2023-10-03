@@ -1,3 +1,8 @@
+# BD RES Signup
+
+![](extras/plugin-preview.png)
+
+
 ## Required parameters
 
 | Key        | Value                                                                                         |
