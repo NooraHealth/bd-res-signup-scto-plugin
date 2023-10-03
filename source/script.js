@@ -1,6 +1,5 @@
 // References to field elements
-var dueDate = document.getElementById('dueDate');
-var phoneNumber = document.getElementById('phoneNumber');
+var toNumber = document.getElementById('toNumber');
 
 
 var signUpBtn = document.getElementById('signup');
@@ -11,20 +10,14 @@ var headingElement = document.getElementById("title");
 
 // References to values stored in the plug-in parameters
 var title = getPluginParameter('title');
-var pPhoneNumber = getPluginParameter('phoneNumber');
-var pDueDate = getPluginParameter('dueDate');
-var referenceMobileNumber = getPluginParameter('referenceMobileNumber');
-var state = getPluginParameter('state');
-var program = getPluginParameter('program');
-var conditionArea = getPluginParameter('conditionArea');
-var callId = getPluginParameter('callId');
+var ptoNumber = getPluginParameter('toNumber');
+var callID = getPluginParameter('callID');
 var apiUrl = getPluginParameter('apiUrl');
 var currentAnswer = fieldProperties.CURRENT_ANSWER;
 
 
 headingElement.innerText = title || "RES Onboarding";
-phoneNumber.innerText = pPhoneNumber;
-dueDate.innerText = formatDate(pDueDate);
+toNumber.innerText = ptoNumber;
 setCurrentStatus();
 
 
@@ -152,8 +145,7 @@ function createPayload(mobile_numbers, expected_date_of_delivery, reference_mobi
     "program": program,
     "country": country,
     "language": language,
-    "reference_mobile_number": reference_mobile_number,
-    "call_id": call_id
+    "call_id": callID
   }
 
 }
